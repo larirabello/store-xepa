@@ -7,5 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Larissa Rabello",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larirabello/store-xepa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/larirabello/store-xepa/issues"
+  },
+  "homepage": "https://github.com/larirabello/store-xepa#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }

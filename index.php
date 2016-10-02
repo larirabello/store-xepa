@@ -5,8 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Projeto Desenvolvimento para Servidores II</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- Latest compiled and minified CSS
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body class="container-fluid">
@@ -18,6 +19,19 @@
 		</div>
 	</div>
 	<div class="row images">
+	<?php
+
+			 	require_once('connection/conn.php');
+				$mysql = new conexao;
+				$info = $mysql->sql_query("select * from products");
+
+				while($dados=mysqli_fetch_array($info)) {
+					echo $dados['name'];
+				}
+
+	?>
+
+
 		<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
 			<img class="center-block" src="http://67.media.tumblr.com/tumblr_m6mn0sUcuE1r8mh8no1_500.jpg" style="width:290px; height:290px">
 			<p class="center-block">Descrição da Imagem</p>
@@ -54,5 +68,6 @@
 	    padding: 0; 
 	}
 		</style>
+		<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	</body>
 </html>
