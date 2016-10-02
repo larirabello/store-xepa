@@ -1,0 +1,11 @@
+{
+  "name": "projeto_integrador",
+  "version": "1.0.0",
+  "description": "Projeto Integrador para o 4o semestre de Sistemas para Internet na FATEC São Roque - Desenvolvido pela aluna Larissa Rabello",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Larissa Rabello",
+  "license": "ISC"
+}
