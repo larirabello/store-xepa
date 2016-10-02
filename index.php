@@ -1,11 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="pt-BR">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Projeto Desenvolvimento para Servidores II</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
     <!-- Latest compiled and minified CSS
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -26,7 +27,15 @@
 				$info = $mysql->sql_query("select * from products");
 
 				while($dados=mysqli_fetch_array($info)) {
-					echo $dados['name'];
+					echo "";
+					if(!empty($dados['file'])){
+					echo "<img src='assets/images/".$dados['file']."' align='absmiddle'></img>&nbsp;&nbsp;";
+					}else{
+					echo "<img src='assets/images/no_image.png' align='absmiddle'></img>&nbsp;&nbsp;";
+					}
+					echo "<p class='center-block'>";
+					echo utf8_encode($dados['name']);
+					echo "</p><hr>";
 				}
 
 	?>
@@ -48,26 +57,7 @@
 			<hr>
 		</div>
 	</div>
-	<style type="text/css">
-		header h1 {
-			font-family: 'Quicksand', sans-serif;
-			font-size: 1.5em;
-			color:#fff;
-		}
-
-		.images {
-			padding: 20px;
-		}
-
-		hr {
-	    display: block;
-	    height: 1px;
-	    border: 0;
-	    border-top: 1px solid #ccc;
-	    margin: 1em 0;
-	    padding: 0; 
-	}
-		</style>
+		<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	</body>
 </html>
