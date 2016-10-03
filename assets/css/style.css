@@ -1,23 +1,115 @@
 img {
-	width: 350px;
+	width: 290px;
 	height: 290px;
 }
 
+header {
+	background-color:#F5F4F4;
+	height:150px;
+}
+
 header h1 {
-			font-family: 'Quicksand', sans-serif;
+			font-family: 'Quicksand', serif;
 			font-size: 1.5em;
-			color:#fff;
+			color:#5C4C52;
 		}
 
 .images {
 	padding: 20px;
 }
 
+.name {
+	font-family: 'Quicksand', sans-serif;
+	font-size:1.4em;
+	color: #5C4C52;
+}
+
 hr {
 	display: block;
 	height: 1px;
+	width: 290px;
 	border: 0;
 	border-top: 1px solid #ccc;
-	margin: 1em 0;
+	margin: 0 auto;
 	padding: 0; 
 }
+
+
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0px 0;
+  font-size: 1.2em;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+.center-block {
+	margin-top: 20px;
+}
+
+.pull-right {
+	margin-top: -20px;
+	margin-right: 120px;
+}
+
+p {
+	padding-left: 150px;
+	margin: -10px 10px;
+}
+
+
+@media (max-width: 800px) 
+{
+  .pull-right {
+  	margin-right: 20px;
+  } 
+
+  p {
+  	padding-left: 20px;
+  }
+   
+}
+
+
+
+
+.color-icon {
+	color: #fff;
+}
+
+.color-icon:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+footer {
+	margin-top: 100px;
+	background-color: #F0AD4E;
+	height: 250px;
+}
+
+footer p {
+	padding: 50px;
+	font-size: 1.2em;
+	font-family: 'Quicksand', sans-serif;
+	color: #fff;
+}
+
+footer hr {
+	border-top: 1px solid rgba(92, 76, 82, 0.4);
+}
+
+
+.modal-content {
+	width: 1200px;
+	position: fixed;
+	left: -100px;
+}
+
+.container-fluid {
+	padding: 0;
+	margin: 0;
