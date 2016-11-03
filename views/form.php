@@ -23,74 +23,103 @@
 	</div>
 	<div class="container">
 	<div class="row">
-    <form class="col s12">
+    <form class="col s12" name="register" onsubmit="return validation()" novalidate>
       <div class="row">
+      	<h1>Cadastro</h1>
+        <div id="errors"></div>
+      	<h2>Dados Pessoais</h2>
         <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
+          <!--<input placeholder="Insira seu nome aqui" id="first_name" type="text" name="name" class="validate">-->
+          <input id="first_name" type="text" name="name" class="validate">
+          <label for="first_name">Nome</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
+          <input id="last_name" type="text" name="surname" class="validate">
+          <label for="last_name">Sobrenome</label>
         </div>
+        <div class="row">
+          <div class="input-field col s6">
+      	  <label>Sexo </label><br><br>
+          <p>
+	      <input class="with-gap" name="sexo" type="radio" id="test1" />
+	      <label for="test1">Feminino</label>
+	    </p>
+	    <p>
+	      <input class="with-gap" name="sexo" type="radio" id="test2" />
+	      <label for="test2">Masculino</label>
+	    </p>
       </div>
-      <div class="row">
+        <div class="input-field col s6">
+          <input disabled value="Desativado" id="disabled" type="text" class="validate">
+          <label for="disabled">Cidade</label>
+        </div>
+        <div class="input-field col s6">
+          <input disabled value="Desativado" id="disabled" type="text" class="validate">
+          <label for="disabled">Estado</label>
+        </div>
+      </div>    
+       
+      <!--<div class="row">
         <div class="input-field col s12">
           <input disabled value="I am not editable" id="disabled" type="text" class="validate">
           <label for="disabled">Disabled</label>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
+      </div> -->
+      <h2>Dados de Acesso</h2>
+       <div class="row">
+        <div class="input-field col s6">
+          <!--<input id="email" type="email" name="email" class="validate"> -->
+          <input id="email" type="email" name="email">
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
-          <div class="input-field col s6">
-      	  <label>Selecione uma cor: </label>
-          <p>
-	      <input name="group1" type="radio" id="test1" />
-	      <label for="test1">Red</label>
-	    </p>
-	    <p>
-	      <input name="group1" type="radio" id="test2" />
-	      <label for="test2">Yellow</label>
-	    </p>
-	    <p>
-	      <input class="with-gap" name="group1" type="radio" id="test3"  />
-	      <label for="test3">Green</label>
-	    </p>
-	      <p>
-	        <input name="group1" type="radio" id="test4" disabled="disabled" />
-	        <label for="test4">Brown</label>
-	    </p>
+        <div class="input-field col s6">
+          <input id="password" type="password" name="password" class="validate">
+          <label for="password">Senha</label>
+        </div>
       </div>
-      <div class="input-field s6">
-      	<p>
-	      <input type="checkbox" id="test5" />
-	      <label for="test5">Red</label>
-	    </p>
-	    <p>
-	      <input type="checkbox" id="test6" checked="checked" />
-	      <label for="test6">Yellow</label>
-	    </p>
-	    <p>
-	      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-	      <label for="filled-in-box">Filled in</label>
-	    </p>
-	    <p>
-	      <input type="checkbox" id="indeterminate-checkbox" />
-	      <label for="indeterminate-checkbox">Indeterminate Style</label>
-	    </p>
+      
       </div>
+
+
+
+
+      <h2>Mais algumas informações...</h2>
+      
+     <div class="row">
+     <h3 style="font-size:1.4em">Preferências</h3>
+     	<div class="input-field s6">
+	      	<p>
+		      <input type="checkbox" name="preferences" id="opt1" />
+		      <label for="opt1">Frutas</label>
+		    </p>
+		    <p>
+		      <input type="checkbox" name="preferences" id="opt2" />
+		      <label for="opt2">Legumes</label>
+		    </p>
+        <p>
+          <input type="checkbox" name="preferences" id="opt3"/>
+          <label for="opt3">Verduras</label>
+        </p>
+        <p>
+          <input type="checkbox" name="preferences" id="opt4"/>
+          <label for="opt4">Peixes e Aves</label>
+        </p>	
+        <p>
+          <input type="checkbox" name="preferences" id="opt5"/>
+          <label for="opt5">Carne vermelha</label>
+        </p>	    
+      	</div>
      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" name="opinion" class="materialize-textarea"></textarea>
+          <label for="textarea1">O que você gostaria de encontrar na feira mais próxima?</label>
+        </div>
+      </div>
+
+  	<input type="submit" class="btn waves-effect waves-light" value="Enviar">
     </form>
   </div>
 
@@ -105,5 +134,7 @@
 
 	<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="../assets/js/validation.js"></script>
 	</body>
 </html>
