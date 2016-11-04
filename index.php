@@ -44,7 +44,7 @@
 					$teste = $dados["name"];
 					echo "</p>";
 					//echo "<a class='color-icon' href='views/details.php'><button type='button' class='btn btn-warning btn-circle pull-right'  data-toggle='modal' data-target='#myModal'>+</button></a>";
-					echo "<a href='#modal1'><button type='button' class='btn btn-warning btn-circle pull-right'  data-toggle='modal' data-target='.bs-example-modal-lg'>+</button></a>";
+					echo "<a href='#modal1'  data-id='".$dados['id']."'><button type='button' class='btn btn-warning btn-circle pull-right' data-target='.bs-example-modal-lg'>+</button></a>";
 					echo "<br><hr>";
 
 
@@ -53,24 +53,24 @@
     				for ($i=0; $i%3 == 0; $i++) {
     					echo "</div>";
     				}
-				}
+				}			
 
+					
 	?>
 	</div>
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-         
+	  <!-- Modal Structure -->
+	  <div id="modal1" class="modal">
+	    <div class="modal-content">
+	      <h4>Modal Header</h4>
+	      <a href='#'><img class='center-block' src=''></img></a>
+	      <p>A bunch of text</p>
+	      <br>
+	      <p class="price"></p>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+	    </div>
+	  </div>
 	<footer>
 		<p class="text-center">Larissa Rabello - Outubro/2016</p>
 		<hr>
@@ -84,7 +84,27 @@
 		
 		 $(document).ready(function(){
 	    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-		    $('.modal').modal();
+		    $('.modal').modal({
+		    	ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.	   
+	        		let id = $(trigger).data("id");
+
+	        		$.ajax({url	: "api/produtos.php",
+	        				type : "POST",
+	        				dataType : "json",
+	        				data : {id : id}
+	        		}).then(data => {
+	        
+	        				$(modal).find('div.modal-content').find('h4').html(data.name);
+
+	        				$(modal).find('div.modal-content').find('p').html(data.description);
+
+	        				$(modal).find('div.modal-content').find('p.price').html("R$ "+data.price);
+
+	        				$(modal).find('div.modal-content').find('img').attr('src', 'assets/images/'+data.file);
+
+	        		}) 
+	      		}});
+
 		  });
 	</script>
 	</body>
