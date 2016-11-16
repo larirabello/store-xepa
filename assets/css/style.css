@@ -3,9 +3,16 @@ img {
 	height: 290px;
 }
 
-header {
+body {
 	background-color:#F5F4F4;
-	height:150px;
+	font-size: 16px;
+    line-height: 1.7;
+    font-family: "Raleway", sans-serif;
+    color: #5c4b51;
+}
+header {
+	/*background-color:#F5F4F4;*/
+	height:130px;
 }
 
 header h1 {
@@ -13,6 +20,40 @@ header h1 {
 			font-size: 1.5em;
 			color:#5C4C52;
 		}
+
+.menu-header {
+	background-color: #F5F4F4;
+}
+
+
+nav {
+	margin: 0 auto;
+	background-color: #fff;
+	box-shadow: none;
+	height: 86px;
+	width: 96%;	
+	position: relative;
+	padding: 20px 100px 0px 100px;
+}
+
+nav ul a {
+	font-size: 1.2em;
+	font-family: 'Raleway', sans-serif;
+	color: #5D4D53!important;
+	text-align: center;
+}
+
+nav ul a span {
+	font-size: 1em;
+}
+
+nav ul a:hover {
+	color: #F06060!important;
+}
+
+nav ul a span:hover {
+	color: #8EBFB4;
+}
 
 .images {
 	padding: 20px;
@@ -73,9 +114,6 @@ p {
    
 }
 
-
-
-
 .color-icon {
 	color: #fff;
 }
@@ -127,7 +165,128 @@ h2 {
   color: #F0AD4E;
 }
 
+img#logo {
+	width:128px;
+	height: 96px;
+}
 
+
+/* CSS DO VIDEO COMO BACKGROUND */
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+
+/* transparencia em cima do video */
+.video-container .filter {
+    background: rgba(250, 250, 250, 0.3);
+    height: 100%;
+}
+
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #fff;
+}
+
+
+/* navbar textos */
+
+#slogan-left {
+	font-size: 1em;
+	font-family: 'Pacifico', cursive;
+	margin-top: 45px;
+	padding-left: 200px;
+}
+
+#slogan-right {
+	font-size: 1em;
+	font-family: 'Pacifico', cursive;
+	margin-top: -30px;
+}
+
+
+/* botão down  home*/
+
+@-webkit-keyframes circleBounce {
+  0% {-webkit-transform: scale(0.9); opacity: 0;}
+  20% {opacity: 0.5;}
+  50% {opacity: 1;}
+  80% {opacity: 0.5;}
+  100% {-webkit-transform: scale(1.1); opacity:0;}
+}
+
+.page-down {
+  position: relative;
+  top: 50px;
+  left: calc(50% - 3px);
+  width: 12px;
+  height: 12px;
+  border: 3px solid red;
+  border-top: none;
+  border-left: none;
+  cursor:pointer;
+  
+  -webkit-transform: rotate(45deg);
+  -webkit-transform-origin: 50% 50%;
+}
+
+.page-down:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 23px); /*circle = 1+50+1 = 52px*/
+  left: calc(50% - 23px); /*arrow = 3+3 = 6px*/
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255,255,255,.8);
+  border: 1px solid red;
+  border-radius: 50%;
+  
+  -webkit-animation: circleBounce 2s linear infinite;  
+}
+
+.page-down:hover:after {
+  background-color: rgba(255,0,0,.15);
+}
 
 
 

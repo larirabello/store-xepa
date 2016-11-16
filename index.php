@@ -3,7 +3,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Projeto Desenvolvimento para Servidores II</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <title>Xêpa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css"/>      
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.brown-orange.min.css" />
@@ -13,16 +14,68 @@
     <!-- Latest compiled and minified CSS
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"><!--letra do header -->
+
 </head>
 <body class="container-fluid">
-	<div class="row">
-		<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-			<header class="text-center" style="padding:40px">
-				<h1>Projeto Desenvolvimento para Servidores II</h1>
+	<!--<div class="row">
+		<div class="menu-header">
+			<header class="text-center" style="padding:30px">
+				<a href="#"><img id="logo" src="assets/images/logo2.png"/></a>
 			</header>
+			<nav>
+				<ul class="nav nav-justified">
+					<li><a href="#">Encontre sua feira <span class="glyphicon glyphicon-tree-deciduous"></span></a></li>
+					<li><a href="#">Lista de Compras <span class="glyphicon glyphicon-apple"></a></li>
+					<li><a href="#">Cartão Fidelidade <span class="glyphicon glyphicon-piggy-bank"></a></li>
+				</ul>
+			</nav>
 		</div>
-		<!-- <button type="button" class="btn btn-default"><a href="views/form.php">Formulário</a></button> -->
+		<!-- <button type="button" class="btn btn-default"><a href="views/form.php">Formulário</a></button> 
+	</div> -->
+	<div class="homepage-hero-module">
+	    <div class="video-container">
+	        <div class="filter">
+
+	        	<header class="text-center" style="padding:30px">
+					<div class="row" style="display:inline">
+		        		<div class="col-lg-4 pull-left">
+		        			<h1 id="slogan-left">Os alimentos orgânicos mais frescos...</h1>
+		        		</div>
+		        		<div class="col-lg-4">
+		        			<a href="#"><img id="logo" src="assets/images/logo2.png"/></a>
+		        		</div>
+		        		<div class="col-lg-4 pull-right">
+		        			<h1 id="slogan-right">... Da horta para a sua mesa</h1>
+		        		</div>
+		        	</div>
+					
+				</header>
+				<nav>
+					<ul class="nav nav-justified">
+						<li><a href="#">Encontre sua feira <span class="glyphicon glyphicon-tree-deciduous"></span></a></li>
+						<li><a href="#">Lista de Compras <span class="glyphicon glyphicon-apple"></a></li>
+						<li><a href="#">Cartão Fidelidade <span class="glyphicon glyphicon-piggy-bank"></a></li>
+					</ul>
+				</nav>
+				<div><a class="pull-right" href="#"><span class="glyphicon page-down"></span></a></div>
+	        </div>
+	        <video autoplay loop class="fillWidth">
+	            <source src="assets/images/video/MP4/Veggie-Stand.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+	            <source src="assets/images/video/WEBM/Veggie-Stand.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+	        </video>
+	        <div class="poster hidden">
+	            <img src="assets/images/video/Snapshots/Veggie-Stand.jpg" alt="">
+	        </div>
+	    </div>
 	</div>
+
+
+
+
+
 	<div class="row images">
 	<?php
 
@@ -79,7 +132,9 @@
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+	<script type="text/javascript" src="../assets/js/video.js"></script>
   	<script type="text/javascript">
 		
 		 $(document).ready(function(){
