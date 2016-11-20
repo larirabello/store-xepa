@@ -34,6 +34,10 @@
 	  transition: all 0.6s ease;
 	}
 
+	.main-nav #logo {
+		display: none;
+	}
+
 	header,
 	.main-nav-scrolled {
 		position: fixed;
@@ -46,29 +50,52 @@
 		transform: translate3d(0, -130px, 0);
 	}
 
-	/*header div a {
+	header div a {
 		border: none;
 	}
-	header div #logo {
-		border: none;
+	header #logo div{
+		width: 128px;
+		height: 96px;
+		background-size: 128px 96px;
+		margin: 0 auto;
 		background: url('assets/images/logo2.png');
-	}*/
+	}
+
+	.main-nav-scrolled {
+		height: 122px;
+	}
+	.main-nav-scrolled #logo {
+		display: block;
+		background-size: 64px 38px;
+		margin: 0 auto;
+	}
+
+	.top-scrolled #logo {
+		display: none;
+	}
+
+	.main-nav-scrolled #logo div {
+		width: 64px;
+		height: 38px;
+		background-size: 64px 38px;
+    	background-repeat: no-repeat;
+		margin: 0 auto;
+	}
 
 
 </style>
 <header style="z-index:200;margin-top: 20px;" class="text-center" style="padding:30px">
-					<div class="row" style="display:inline">
+					<div class="row top" style="display:inline">
 		        		<div class="col-lg-4 pull-left">
 		        			<h1 id="slogan-left">Os alimentos orgânicos mais frescos...</h1>
 		        		</div>
-		        		<div class="col-lg-4">
-		        			<a href="#"><img id="logo" src="assets/images/logo2.png"/></a>
-		        		</div>
+		        		<a href="#" id="logo"><div></div></a>
 		        		<div class="col-lg-4 pull-right">
 		        			<h1 id="slogan-right">... Da horta para a sua mesa</h1>
 		        		</div>
 		        	</div>
 					<nav class="main-nav">
+						<a href="#" id="logo"><div></div></a>
 						<ul class="nav nav-justified">
 							<li><a href="#">Encontre sua feira <span class="glyphicon glyphicon-tree-deciduous"></span></a></li>
 							<li><a href="#">Lista de Compras <span class="glyphicon glyphicon-apple"></a></li>
