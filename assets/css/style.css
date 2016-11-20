@@ -1,3 +1,19 @@
+/* nav fixed*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
 img {
 	width: 290px;
 	height: 290px;
@@ -49,6 +65,8 @@ nav ul a span {
 
 nav ul a:hover {
 	color: #F06060!important;
+	padding-bottom: 30px;
+	border-bottom: 3px solid rgba(246, 158, 158, 0.8);	
 }
 
 nav ul a span:hover {
@@ -192,7 +210,8 @@ img#logo {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: #000;
+    /*background: #000;
+    padding-bottom: 0;*/
 }
 .video-container .poster img {
     width: 100%;
@@ -208,7 +227,7 @@ img#logo {
 .video-container video {
     position: absolute;
     z-index: 0;
-    bottom: 0;
+    top: 0;
 }
 .video-container video.fillWidth {
     width: 100%;
@@ -256,11 +275,11 @@ img#logo {
 
 .page-down {
   position: relative;
-  top: 50px;
+  top: 440px;
   left: calc(50% - 3px);
   width: 12px;
   height: 12px;
-  border: 3px solid red;
+  border: 3px solid #fff;
   border-top: none;
   border-left: none;
   cursor:pointer;
@@ -278,14 +297,14 @@ img#logo {
   width: 50px;
   height: 50px;
   border: 1px solid rgba(255,255,255,.8);
-  border: 1px solid red;
+  border: 1px solid #fff;
   border-radius: 50%;
   
   -webkit-animation: circleBounce 2s linear infinite;  
 }
 
 .page-down:hover:after {
-  background-color: rgba(255,0,0,.15);
+  background-color: rgba(0,0,0,.15);
 }
 
 

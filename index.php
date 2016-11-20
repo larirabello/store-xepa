@@ -19,7 +19,63 @@
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"><!--letra do header -->
 
 </head>
-<body class="container-fluid">
+<body class="container-fluid main">
+<style type="text/css">
+	
+	.main-nav,
+	.main {
+	  position: relative; 
+	 
+	}
+
+	.main-nav {
+	  z-index: 150;
+	  top:10%;
+	  transition: all 0.6s ease;
+	}
+
+	header,
+	.main-nav-scrolled {
+		position: fixed;
+		width: 100%;
+		top: 0;
+
+	}
+
+	header .header--clear  {
+		transform: translate3d(0, -130px, 0);
+	}
+
+	/*header div a {
+		border: none;
+	}
+	header div #logo {
+		border: none;
+		background: url('assets/images/logo2.png');
+	}*/
+
+
+</style>
+<header style="z-index:200;margin-top: 20px;" class="text-center" style="padding:30px">
+					<div class="row" style="display:inline">
+		        		<div class="col-lg-4 pull-left">
+		        			<h1 id="slogan-left">Os alimentos orgânicos mais frescos...</h1>
+		        		</div>
+		        		<div class="col-lg-4">
+		        			<a href="#"><img id="logo" src="assets/images/logo2.png"/></a>
+		        		</div>
+		        		<div class="col-lg-4 pull-right">
+		        			<h1 id="slogan-right">... Da horta para a sua mesa</h1>
+		        		</div>
+		        	</div>
+					<nav class="main-nav">
+						<ul class="nav nav-justified">
+							<li><a href="#">Encontre sua feira <span class="glyphicon glyphicon-tree-deciduous"></span></a></li>
+							<li><a href="#">Lista de Compras <span class="glyphicon glyphicon-apple"></a></li>
+							<li><a href="#">Cartão Fidelidade <span class="glyphicon glyphicon-piggy-bank"></a></li>
+						</ul>
+					</nav>
+				</header>
 	<!--<div class="row">
 		<div class="menu-header">
 			<header class="text-center" style="padding:30px">
@@ -38,28 +94,7 @@
 	<div class="homepage-hero-module">
 	    <div class="video-container">
 	        <div class="filter">
-
-	        	<header class="text-center" style="padding:30px">
-					<div class="row" style="display:inline">
-		        		<div class="col-lg-4 pull-left">
-		        			<h1 id="slogan-left">Os alimentos orgânicos mais frescos...</h1>
-		        		</div>
-		        		<div class="col-lg-4">
-		        			<a href="#"><img id="logo" src="assets/images/logo2.png"/></a>
-		        		</div>
-		        		<div class="col-lg-4 pull-right">
-		        			<h1 id="slogan-right">... Da horta para a sua mesa</h1>
-		        		</div>
-		        	</div>
-					
-				</header>
-				<nav>
-					<ul class="nav nav-justified">
-						<li><a href="#">Encontre sua feira <span class="glyphicon glyphicon-tree-deciduous"></span></a></li>
-						<li><a href="#">Lista de Compras <span class="glyphicon glyphicon-apple"></a></li>
-						<li><a href="#">Cartão Fidelidade <span class="glyphicon glyphicon-piggy-bank"></a></li>
-					</ul>
-				</nav>
+	        	
 				<div><a class="pull-right" href="#"><span class="glyphicon page-down"></span></a></div>
 	        </div>
 	        <video autoplay loop class="fillWidth">
@@ -134,7 +169,8 @@
 	  <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
-	<script type="text/javascript" src="../assets/js/video.js"></script>
+	<script type="text/javascript" src="assets/js/video.js"></script>
+	<script type="text/javascript" src="assets/js/navbar.js"></script>
   	<script type="text/javascript">
 		
 		 $(document).ready(function(){
