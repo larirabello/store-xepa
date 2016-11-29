@@ -5,22 +5,22 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-img {
+/*img {
 	width: 290px;
 	height: 290px;
+}*/
+
+.promo img {
+  width: 290px;
+}
+
+.destaques img {
+  width: 100%;
+  height: 100%;
 }
 
 body {
-	background-color:#F5F4F4;
+	background-color:#fff; /*#F5F4F4*/
 	font-size: 16px;
     line-height: 1.7;
     font-family: "Raleway", sans-serif;
@@ -50,6 +50,7 @@ nav {
 	width: 96%;	
 	position: relative;
 	padding: 20px 100px 0px 100px;
+  border-top: 5px solid #fff;
 }
 
 nav ul a {
@@ -84,6 +85,12 @@ nav ul a span:hover {
 }
 
 hr {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+footer hr {
 	display: block;
 	height: 1px;
 	width: 290px;
@@ -106,7 +113,7 @@ hr {
 }
 
 .center-block {
-	margin-top: 20px;
+	margin-top: 120px;
 }
 
 .pull-right {
@@ -143,7 +150,7 @@ p {
 
 
 footer {
-	margin-top: 100px;
+	/*margin-top: 100px;*/
 	background-color: #F0AD4E;
 	height: 250px;
 }
@@ -246,6 +253,10 @@ img#logo {
     background-color: #fff;
 }
 
+  footer.page-footer {
+    margin-top: 0!important;
+  }
+
 
 /* navbar textos */
 
@@ -275,11 +286,11 @@ img#logo {
 
 .page-down {
   position: relative;
-  top: 440px;
+  top: 780px;
   left: calc(50% - 3px);
   width: 12px;
   height: 12px;
-  border: 3px solid #fff;
+  border: 3px solid rgb(246, 184, 98);
   border-top: none;
   border-left: none;
   cursor:pointer;
@@ -296,8 +307,8 @@ img#logo {
   left: calc(50% - 23px); /*arrow = 3+3 = 6px*/
   width: 50px;
   height: 50px;
-  border: 1px solid rgba(255,255,255,.8);
-  border: 1px solid #fff;
+  border: 1px solid rgba(246, 184, 98, 0.8);
+  border: 1px solid rgb(246, 184, 98);
   border-radius: 50%;
   
   -webkit-animation: circleBounce 2s linear infinite;  
@@ -307,14 +318,66 @@ img#logo {
   background-color: rgba(0,0,0,.15);
 }
 
+.promo {
+  padding-bottom:70px;
+}
+
+.promo p{ 
+  margin-top: 250px;
+}
+
+.promo abbr {
+  float: left;
+  margin-left: 160px;
+  padding-top: 65px;
+}
+
+.promo h3 {
+    float: left;
+    margin-left: 5px;
+    padding-top: 35px;
+
+}
+
+.promo em {
+  float: left;
+  padding-top: 90px;
+  margin-left: -110px;
+}
+
+.promo img {
+  float: right;
+  margin-top: 200px;
+  height: 350px;
+  width: 350px;
+}
+
+.destaques .col-md-6 .col-lg-6 {
+  padding: none;
+  background-color: #fff;
+}
+
+img.random-prod:hover{
+  background: red;
+}
 
 
+/* as imagens da index ficam melhores */
+  .col-lg-6 {
+      width: 50%;
+      padding: 1px;
+  }
+
+.row {
+  margin-bottom: 10px;
+}
 
 
+/* footer */
+footer.page-footer {
+    margin-top: 20px;
+    background-color: #ee6e73;
+}
 
 
-
-
-
-
-
+/* lista de compras */
