@@ -40,12 +40,18 @@
 		  		<h1>Login</h1>
 					<form action="#">
 						<div class="mdl-textfield mdl-js-textfield">
-							<input class="mdl-textfield__input" type="text" id="username" />
+							<input id="user" type="text" name="user" class="validate">
+	          				<label for="first_name">Usuário</label>
+	          				<input id="pass" type="password" name="pass" class="validate">
+          					<label for="pass">Senha</label>
+          					</div>
+						<div class="mdl-textfield mdl-js-textfield">
+							<!--<input class="mdl-textfield__input" type="text" id="username" />
 							<label class="mdl-textfield__label" for="username">Usuário</label>
 						</div>
 						<div class="mdl-textfield mdl-js-textfield">
 							<input class="mdl-textfield__input" type="password" id="userpass" />
-							<label class="mdl-textfield__label" for="userpass">Senha</label>
+							<label class="mdl-textfield__label" for="userpass">Senha</label>-->
 						</div>
 					</form>
 				</div>

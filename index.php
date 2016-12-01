@@ -89,8 +89,7 @@
 	<div class="homepage-hero-module">
 	    <div class="video-container">
 	        <div class="filter">
-	        	
-				<div><a class="pull-right" href="#promo"><span class="glyphicon page-down"></span></a></div>
+	        	<div><a class="pull-right" id="button" href="#promo"><span class="glyphicon page-down"></span></a></div>
 	        </div>
 	        <video autoplay loop class="fillWidth">
 	            <source src="assets/images/video/MP4/Veggie-Stand.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -119,6 +118,7 @@
 	<?php
 	@include('views/partials/footer.php');
 	?>
+		
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	  <!-- Compiled and minified JavaScript -->
