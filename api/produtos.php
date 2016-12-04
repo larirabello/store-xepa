@@ -3,9 +3,9 @@
 	$id = $_REQUEST["id"];
 
 	require_once('../connection/conn.php');
-	$mysql = new conexao;
+	$db = Db::getInstance();
 
-	$info = $mysql->sql_query("select * from products where id=".$id);
+	$info = $db->sql_query("select * from products where id=".$id);
 
 	$row = $info->fetch_array(MYSQLI_ASSOC);
 

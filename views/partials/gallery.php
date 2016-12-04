@@ -1,8 +1,8 @@
 <?php
 
 			 	require_once('../connection/conn.php');
-				$mysql = new conexao;
-				$info = $mysql->sql_query("select * from products");
+				$db = Db::getInstance();
+				$info = $db->sql_query("select * from products");
 
 				//$i=0;
 				while($dados=mysqli_fetch_array($info)) {

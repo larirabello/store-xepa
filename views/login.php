@@ -1,3 +1,50 @@
+<?php
+	
+	require_once('../service/auth.php');
+
+	$result = [];
+
+	if (isset($_POST['user']) && isset($_POST['pass'])) {
+		
+		$user = $_POST['user']; // o que vem do form
+		$pass = sha1($_POST['pass']);
+
+		$authService = new AuthService;
+
+		$result = $authService->login($user, $pass);
+
+		if ($result && $result['status']=="sucesso") {
+
+			session_start('login');
+			$_SESSION['id'] = $result['id'];
+			$_SESSION['nome'] = $result['nome'];
+			$_SESSION['status'] = 'ativo';
+			$_SESSION['tipo'] = $result['tipo'];	
+
+			header("Location:../views/admin.php");
+
+		} else {
+
+			header("Location:login.php?status=erro");
+			//redirecionar para propria pagina com parametro na url
+
+			/*echo $_SESSION['status'];
+			if($_SESSION['status'] == 'erro' && $_SESSION['user'] == $user && $_SESSION['pass'] == $pass) {
+				$result = [];
+			} else {
+				$_SESSION['user'] = $user;
+				$_SESSION['pass'] = $pass;
+				$_SESSION['status'] = 'erro';
+			}*/
+			
+		}
+
+		
+
+
+	}
+
+?>
 <!doctype html>
 <html class="no-js" lang="pt-BR">
 <head>
@@ -38,7 +85,7 @@
 				</div>
 		  	<div class="mdl-card__supporting-text" style="padding-left: 23%">
 		  		<h1>Login</h1>
-					<form action="#">
+					<form action="login.php" method="POST">
 						<div class="mdl-textfield mdl-js-textfield">
 							<input id="user" type="text" name="user" class="validate">
 	          				<label for="first_name">Usuário</label>
@@ -53,10 +100,16 @@
 							<input class="mdl-textfield__input" type="password" id="userpass" />
 							<label class="mdl-textfield__label" for="userpass">Senha</label>-->
 						</div>
+						<?php
+
+							 if (isset($_GET['status']) && $_GET['status'] == 'erro') {
+							 	echo "<div>Erro! Usuário e/ou senha incorretos</div>";
+							 }
+						?>
+						<div class="mdl-card__actions mdl-card--border">
+							<button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Entrar</button>
+						</div>
 					</form>
-				</div>
-				<div class="mdl-card__actions mdl-card--border">
-					<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Entrar</button>
 				</div>
 			</div>
 		</main>

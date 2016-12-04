@@ -24,7 +24,7 @@
 					<a href=""><img src="../assets/images/logo2.png"/></a>
 				</div>
 		  	<div class="mdl-card__supporting-text">
-					<form action="#">
+					<form action="login.php">
 						<div class="mdl-textfield mdl-js-textfield">
 							<input class="mdl-textfield__input" type="text" id="username" />
 							<label class="mdl-textfield__label" for="username">Username</label>
