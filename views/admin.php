@@ -7,6 +7,10 @@
 </head>
 <body class="container-fluid">
 <?php
+
+$welcome = "";
+$user = "";
+
 session_start("login");
 
 if ($_SESSION['status'] !== "ativo")
@@ -14,10 +18,14 @@ if ($_SESSION['status'] !== "ativo")
 	session_destroy();
 	header("location:index.php");
 	}
-	echo "Bem vindo ao sistema";	
-	echo "<br>Olá,".$_SESSION['nome'];
+
+	$welcome = "<br>Olá, ".$_SESSION['nome'];
 ?>
   <style type="text/css">
+
+  	body {
+  		margin-top: 260px!important;
+  	}
     
     .main-nav,
     .main {
@@ -83,13 +91,6 @@ if ($_SESSION['status'] !== "ativo")
       background-color: #fff;
     }
 
-   /* .col-lg-4 {
-      padding: 0;
-      margin:0;
-      width: 400px;
-    }
-  */
-
 
   h1.prod-type {
     text-transform: uppercase;
@@ -131,6 +132,9 @@ if ($_SESSION['status'] !== "ativo")
     border-top: none;
   }
 
+  a:hover, a:focus {
+    color: #B0A290;
+}
 
   </style>
 	<div class="nav-wrapper">
@@ -138,120 +142,78 @@ if ($_SESSION['status'] !== "ativo")
 	@include('partials/header.php');
 	?>
 	</div>
-	<div class="row">
-		<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-			<header class="text-center" style="padding:40px">
-				<h1>Projeto Desenvolvimento para Servidores I</h1>
-			</header>
-		</div>
-	</div>
 	<div class="container">
-	<div class="row">
-    <form class="col s12" name="register" onsubmit="return validation()" novalidate>
+		<!-- <a style="margin-right:-10px" class="waves-effect waves-light btn pull-right" href="../api/logout.php">Logout</a> -->
+		<a style="margin-right:-10px" class="waves-effect waves-light btn pull-right" href="form.php">Novo Produto</a>
+		<div class="row">
+		<h1>Produtos Cadastrados</h1>
+		<table class="bordered highlight">
+        <thead>
+          <tr>
+          	  <th data-field="id">Cód.</th>
+              <th data-field="name">Nome</th>
+              <th data-field="description">Descrição</th>
+              <th data-field="price">Preço</th>
+              <th data-field="type">Categoria</th>
+              <th data-field="file">Imagem</th>
+              <th data-field="edit">Editar</th>
+              <th data-field="delete">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>	
+		<?php
 
-      <div class="row">
-      <a href="../api/logout.php">logout</a>
-      	<h1>Cadastro</h1>
-        <div id="errors"></div>
-      	<h2>Dados Pessoais</h2>
-        <div class="input-field col s6">
-          <!--<input placeholder="Insira seu nome aqui" id="first_name" type="text" name="name" class="validate">-->
-          <input id="first_name" type="text" name="name" class="validate">
-          <label for="first_name">Nome</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" name="surname" class="validate">
-          <label for="last_name">Sobrenome</label>
-        </div>
-        <div class="row">
-          <div class="input-field col s6">
-      	  <label>Sexo </label><br><br>
-          <p>
-	      <input class="with-gap" name="sexo" type="radio" id="test1" />
-	      <label for="test1">Feminino</label>
-	    </p>
-	    <p>
-	      <input class="with-gap" name="sexo" type="radio" id="test2" />
-	      <label for="test2">Masculino</label>
-	    </p>
-      </div>
-        <div class="input-field col s6">
-          <input disabled value="Desativado" id="disabled" type="text" class="validate">
-          <label for="disabled">Cidade</label>
-        </div>
-        <div class="input-field col s6">
-          <input disabled value="Desativado" id="disabled" type="text" class="validate">
-          <label for="disabled">Estado</label>
-        </div>
-      </div>    
+			 	require_once('../connection/conn.php');
+				$db = Db::getInstance();
+				$info = $db->sql_query("select * from products");
 
+				
+				while($dados=mysqli_fetch_array($info)) {
 
-       
-      <!--<div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-          <label for="disabled">Disabled</label>
-        </div>
-      </div> -->
-      <h2>Dados de Acesso</h2>
-       <div class="row">
-        <div class="input-field col s6">
-          <!--<input id="email" type="email" name="email" class="validate"> -->
-          <input id="email" type="email" name="email">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="password" type="password" name="password" class="validate">
-          <label for="password">Senha</label>
-        </div>
-      </div>
-      
-      </div>
+					echo "<tr>";
+
+					echo "<td>".$dados['id']."</td>";
+					echo "<td>".utf8_encode($dados['name'])."</td>";
+					echo "<td>".utf8_encode($dados['description'])."</td>";
+					echo "<td>".utf8_encode($dados['price'])."</td>";
+					echo "<td>".utf8_encode($dados['type'])."</td>";
+					echo "<td><img style='width:60px;height:60px'  src='../assets/images/".$dados['file']."'></img></td>";
+					//echo "<td>".$dados['file']."</td>";
+					echo  "<td><a style='' title='Editar item' class='btn-floating'><span style='margin-left:30%' class='glyphicon glyphicon-edit'></span></a></td>";
+					echo  "<td><a style='' title='Excluir item' class='btn-floating red'><span style='margin-left:30%' class='glyphicon glyphicon-remove'></span></a></td>";
+
+					echo "</tr>";
 
 
 
+					/*if(!empty($dados['file'])) {
+					echo "<a><img style='width:320px;height:320px' class='center-block' src='../assets/images/".$dados['file']."'></img></a>";
+					}else{
+					echo "<img class='img-responsive' src='../assets/images/no_image.png' align='absmiddle'></img>";
+					}
+					echo "<p class='center-block name'>";
+					echo utf8_encode($dados['name']);
+					$teste = $dados["name"];
+					echo "</p>";
+					//echo "<a class='color-icon' href='views/details.php'><button type='button' class='btn btn-warning btn-circle pull-right'  data-toggle='modal' data-target='#myModal'>+</button></a>";
+					echo "<a href='#modal1'  data-id='".$dados['id']."'><button type='button' class='btn btn-warning btn-circle pull-right' data-target='.bs-example-modal-lg'>+</button></a>";
+					echo "<br><hr>";
 
-      <h2>Mais algumas informações...</h2>
-      
-     <div class="row">
-     <h3 style="font-size:1.4em">Preferências</h3>
-     	<div class="input-field s6">
-	      	<p>
-		      <input type="checkbox" name="preferences" id="opt1" />
-		      <label for="opt1">Frutas</label>
-		    </p>
-		    <p>
-		      <input type="checkbox" name="preferences" id="opt2" />
-		      <label for="opt2">Legumes</label>
-		    </p>
-        <p>
-          <input type="checkbox" name="preferences" id="opt3"/>
-          <label for="opt3">Verduras</label>
-        </p>
-        <p>
-          <input type="checkbox" name="preferences" id="opt4"/>
-          <label for="opt4">Peixes e Aves</label>
-        </p>	
-        <p>
-          <input type="checkbox" name="preferences" id="opt5"/>
-          <label for="opt5">Carne vermelha</label>
-        </p>	    
-      	</div>
-     </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" name="opinion" class="materialize-textarea"></textarea>
-          <label for="textarea1">O que você gostaria de encontrar na feira mais próxima?</label>
-        </div>
-      </div>
 
-  	<input type="submit" class="btn waves-effect waves-light" value="Enviar">
-    </form>
-  </div>
+					//$i++;
+    				//if ($i%3 == 0) echo '</div><div class="row images">';
+    				for ($i=0; $i%3 == 0; $i++) {
+    					echo "</div>";
+    				}
 
-		 
+    				*/
+				}	
+				
+				?>
+
+		</tbody>
+		</table>
+ 	    </div> 
 	</div>
   <?php
   @include('../views/partials/footer.php');
@@ -261,6 +223,6 @@ if ($_SESSION['status'] !== "ativo")
 	<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
 
-	<script type="text/javascript" src="../assets/js/validation.js"></script>
+	<script type="text/javascript" src="../assets/js/navbar.js"></script>
 	</body>
 </html>

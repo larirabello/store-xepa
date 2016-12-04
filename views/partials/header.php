@@ -1,4 +1,9 @@
 <header style="z-index:200;margin-top: 20px;" class="text-center" style="padding:30px">
+	<div class="row clear pull-right">
+    	<?php
+		 echo $welcome;
+		?>
+	</div>
 	<div class="row top" style="display:inline">
 		<div class="col-lg-4 pull-left">
 			<h1 id="slogan-left">Os alimentos orgânicos mais frescos...</h1>
