@@ -4,6 +4,7 @@
 				$db = Db::getInstance();
 				$info = $db->sql_query("select * from products");
 
+
 				//$i=0;
 				while($dados=mysqli_fetch_array($info)) {
 
@@ -27,7 +28,20 @@
     				for ($i=0; $i%3 == 0; $i++) {
     					echo "</div>";
     				}
-				}			
+
+    				//session_start();
+
+					//$_SESSION['total'] = count($dados);
+
+
+    				$total = count($dados);
+				
+				}
+
+					"total ".$total;	
+
+
+		
 
 					
 	?>

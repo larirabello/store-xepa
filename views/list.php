@@ -131,7 +131,8 @@
   <div class="row text-center"  style="padding-top:250px;">
       <div class="col-lg-12 col-md-12">
         <h1 class="prod-type">Produtos</h1>
-        <p class="prod-desc">X produtos na lista</p>
+        <p class="prod-desc">
+        X produtos na lista</p>
       </div>
     </div> 
     <div class="row images">

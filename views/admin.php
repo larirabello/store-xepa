@@ -142,7 +142,7 @@ if ($_SESSION['status'] !== "ativo")
 	@include('partials/header.php');
 	?>
 	</div>
-	<div class="container">
+	<div class="container" style="margin-bottom: 100px">
 		<!-- <a style="margin-right:-10px" class="waves-effect waves-light btn pull-right" href="../api/logout.php">Logout</a> -->
 		<a style="margin-right:-10px" class="waves-effect waves-light btn pull-right" href="form.php">Novo Produto</a>
 		<div class="row">
@@ -179,34 +179,10 @@ if ($_SESSION['status'] !== "ativo")
 					echo "<td>".utf8_encode($dados['type'])."</td>";
 					echo "<td><img style='width:60px;height:60px'  src='../assets/images/".$dados['file']."'></img></td>";
 					//echo "<td>".$dados['file']."</td>";
-					echo  "<td><a style='' title='Editar item' class='btn-floating'><span style='margin-left:30%' class='glyphicon glyphicon-edit'></span></a></td>";
-					echo  "<td><a style='' title='Excluir item' class='btn-floating red'><span style='margin-left:30%' class='glyphicon glyphicon-remove'></span></a></td>";
+					echo  "<td><a data-target='.bs-example-modal-lg' title='Editar item' class='btn-floating'><span style='margin-left:30%' class='glyphicon glyphicon-edit'></span></a></td>";
+					echo  "<td><a  data-id='".$dados['id']."' title='Excluir item' class='delete btn-floating red'><span style='margin-left:30%' class='glyphicon glyphicon-remove'></span></a></td>";
 
 					echo "</tr>";
-
-
-
-					/*if(!empty($dados['file'])) {
-					echo "<a><img style='width:320px;height:320px' class='center-block' src='../assets/images/".$dados['file']."'></img></a>";
-					}else{
-					echo "<img class='img-responsive' src='../assets/images/no_image.png' align='absmiddle'></img>";
-					}
-					echo "<p class='center-block name'>";
-					echo utf8_encode($dados['name']);
-					$teste = $dados["name"];
-					echo "</p>";
-					//echo "<a class='color-icon' href='views/details.php'><button type='button' class='btn btn-warning btn-circle pull-right'  data-toggle='modal' data-target='#myModal'>+</button></a>";
-					echo "<a href='#modal1'  data-id='".$dados['id']."'><button type='button' class='btn btn-warning btn-circle pull-right' data-target='.bs-example-modal-lg'>+</button></a>";
-					echo "<br><hr>";
-
-
-					//$i++;
-    				//if ($i%3 == 0) echo '</div><div class="row images">';
-    				for ($i=0; $i%3 == 0; $i++) {
-    					echo "</div>";
-    				}
-
-    				*/
 				}	
 				
 				?>
@@ -215,14 +191,34 @@ if ($_SESSION['status'] !== "ativo")
 		</table>
  	    </div> 
 	</div>
-  <?php
-  @include('../views/partials/footer.php');
-  ?>
+	<!-- Modal Structure -->
+	  <div id="modal1" class="modal">
+	    <div class="modal-content">
+	      <h4>Modal Header</h4>
+	      <a href='#'><img style='padding:0;width:300px' class='center-block' src=''></img></a>
+	      <p>A bunch of text</p>
+	      <br>
+	      <p class="price"></p>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+	    </div>
+	  </div>
+	<?php
+	  @include('../views/partials/footer.php');
+	?>
 	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
 
 	<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
 
 	<script type="text/javascript" src="../assets/js/navbar.js"></script>
+	<script type="text/javascript" src="../assets/js/delete.js"></script>
+	<script type="text/javascript">
+
+	//INSERT INTO `products`(`name`, `description`, `price`, `file`, `type`) VALUES ('teste', 'teste teste','100','yshhdhuds','teste');
+		
+
+	</script>
 	</body>
 </html>

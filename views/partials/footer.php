@@ -1,9 +1,15 @@
 	<footer class="page-footer">
+  <style type="text/css">
+    footer p {
+      padding: 15px;
+    }
+  </style>
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Xêpa</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          <a href="#" id="logoFooter"><div></div></a>
+          <p class="white-text" style="font-size: 1em">Os alimentos orgânicos mais frescos, da horta para a sua mesa!</p>
+          <p class="grey-text text-lighten-4"><a href="#" id="logoFooter"><div></div></a></p>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Mapa do Site</h5>
@@ -18,8 +24,8 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2014 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      ©2016 Todos os Direitos Reservados
+      <a class="grey-text text-lighten-4 right" href="github.com/larirabello">Projeto Integrador Fatec São Roque</a>
       </div>
     </div>
  </footer>

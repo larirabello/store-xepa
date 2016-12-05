@@ -173,6 +173,16 @@ footer hr {
 	left: -100px;
 }
 */
+footer #logoFooter div {
+ /*font-family: 'Pacifico', sans-serif; */
+  margin-left: 200px;
+  width: 128px;
+  height: 96px;
+  background-size: 128px 96px;
+  background: url('../../assets/images/logo2.png');
+}
+
+
 .container-fluid {
 	padding: 0;
 	margin: 0;
