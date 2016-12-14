@@ -84,7 +84,7 @@
 
 	</style>
 	<?php
-	@include('views/partials/header.php');
+	@include('views/partials/main-menu.php');
 	?>
 	<div class="homepage-hero-module">
 	    <div class="video-container">
@@ -116,7 +116,7 @@
 		</section>
 	</div>
 	<?php
-	@include('views/partials/footer.php');
+	@include('views/partials/main-footer.php');
 	?>
 		
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>

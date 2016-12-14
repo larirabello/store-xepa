@@ -127,19 +127,19 @@
   </style>
   <?php
 
-$welcome = "";
-$user = "";
+  $welcome = "";
+  $user = "";
 
-session_start("login");
+  session_start("login");
 
-if ($_SESSION['status'] !== "ativo")
-   {
-  session_destroy();
-  header("location:index.php");
-  }
+  if ($_SESSION['status'] !== "ativo")
+     {
+    session_destroy();
+    header("location:index.php");
+    }
 
-  $welcome = "<br>Olá, ".$_SESSION['nome'];
-?>
+    $welcome = "<br>Olá, ".$_SESSION['nome'];
+  ?>
   <div class="nav-wrapper">
   <?php
   @include('partials/header.php');

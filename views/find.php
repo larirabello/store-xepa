@@ -154,6 +154,21 @@ ul.address {
 }
 
   </style>
+  <?php
+
+  $welcome = "";
+  $user = "";
+
+  session_start("login");
+
+  if ($_SESSION['status'] !== "ativo")
+     {
+    session_destroy();
+    header("location:index.php");
+    }
+
+    $welcome = "<br>Olá, ".$_SESSION['nome'];
+  ?>
   <div class="nav-wrapper">
   <?php
   @include('partials/header.php');

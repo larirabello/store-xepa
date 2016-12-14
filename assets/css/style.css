@@ -391,3 +391,13 @@ footer.page-footer {
 
 
 /* lista de compras */
+
+
+
+/**/
+
+@media only screen and (min-width: 993px) {
+  .container {
+      width: 100%;
+  }
+}

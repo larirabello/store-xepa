@@ -12,7 +12,7 @@
 					if(!empty($dados['file'])) {
 					echo "<a><img style='width:320px;height:320px' class='center-block' src='../assets/images/".$dados['file']."'></img></a>";
 					}else{
-					echo "<img class='img-responsive' src='../assets/images/no_image.png' align='absmiddle'></img>";
+					echo "<img style='width:320px;height:320px' class='img-responsive' src='../assets/images/no_image.png' align='absmiddle'></img>";
 					}
 					echo "<p class='center-block name'>";
 					echo utf8_encode($dados['name']);

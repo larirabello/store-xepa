@@ -14,18 +14,18 @@
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Mapa do Site</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="../index.php">Home</a></li>
-            <li><a class="grey-text text-lighten-3" href="find.php">Encontre sua feira</a></li>
-            <li><a class="grey-text text-lighten-3" href="list.php">Lista de Compras</a></li>
-            <li><a class="grey-text text-lighten-3" href="fidelity.php">Cartão Fidelidade</a></li>
+            <li><a class="grey-text text-lighten-3" href="index.php">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="views/find.php">Encontre sua feira</a></li>
+            <li><a class="grey-text text-lighten-3" href="views/list.php">Lista de Compras</a></li>
+            <li><a class="grey-text text-lighten-3" href="views/fidelity.php">Cartão Fidelidade</a></li>
             <li><a class="grey-text text-lighten-3" href="contact.php">Fale Conosco</a></li>
           </ul>
         </div>
-         <!-- Colored mini FAB button -->
-        <a href="contact.php"><button style="margin-top: -145px;margin-right: -33px;" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored pull-right">
+        <a href="views/contact.php"><button style="margin-top: -145px;margin-right: -33px;" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored pull-right">
           <span class="glyphicon glyphicon-envelope" style="color:#FFFEFD;"></span>
-        </button></a>
+      </button></a>
       </div>
+
     </div>
     <div class="footer-copyright">
       <div class="container">
