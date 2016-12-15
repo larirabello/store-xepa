@@ -5,7 +5,7 @@
 		?>
 	</div>
 	<div class="row top" style="display:inline">
-		<a href="views/login.php" class="pull-right" style="margin-right: 50px">Login</a>
+		<a href="views/login.php" class="pull-right" style="margin-right: 50px;color:#577863">Login</a>
 		<div class="col-lg-4 pull-left">
 			<h1 id="slogan-left">Os alimentos orgânicos mais frescos...</h1>
 		</div>
