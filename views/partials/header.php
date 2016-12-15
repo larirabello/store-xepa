@@ -2,7 +2,7 @@
 	<div class="row clear pqp">
     	<?php 
 		if ($_SESSION['status'] != 'ativo') {
-			echo "<a href='../views/login.php' class='pull-right' style='margin-right: 50px;color:#577863'>Login</a>";
+			echo "<a href='../views/login.php' class='pull-right' style='margin-right: 50px'>Login</a>";
 		} else {
 			
 			echo $welcome."<br>";
@@ -33,5 +33,3 @@
 		</ul>
 	</nav>
 </header>
-
-
