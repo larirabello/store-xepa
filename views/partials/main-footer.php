@@ -18,7 +18,8 @@
             <li><a class="grey-text text-lighten-3" href="views/find.php">Encontre sua feira</a></li>
             <li><a class="grey-text text-lighten-3" href="views/list.php">Lista de Compras</a></li>
             <li><a class="grey-text text-lighten-3" href="views/fidelity.php">Cartão Fidelidade</a></li>
-            <li><a class="grey-text text-lighten-3" href="contact.php">Fale Conosco</a></li>
+            <li><a class="grey-text text-lighten-3" href="views/contact.php">Fale Conosco</a></li>
+            <li><a class="grey-text text-lighten-3" href="views/admin.php">Acessar Admin</a></li>
           </ul>
         </div>
         <a href="views/contact.php"><button style="margin-top: -145px;margin-right: -33px;" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored pull-right">

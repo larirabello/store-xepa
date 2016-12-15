@@ -2,6 +2,7 @@
 
 	require_once('../connection/conn.php');
 	$db = Db::getInstance();
+	$db->setCharset('UTF8');
 
 	if(isset($_FILES["image"]["type"])) {
 		$validextensions = array("JPEG", "´JPG", "PNG");

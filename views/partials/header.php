@@ -1,5 +1,5 @@
 <header style="z-index:200;margin-top: 20px;" class="text-center" style="padding:30px">
-	<div class="row clear pull-right">
+	<div class="row clear pqp">
     	<?php 
 		if ($_SESSION['status'] != 'ativo') {
 			echo "<a href='../views/login.php' class='pull-right' style='margin-right: 50px'>Login</a>";
@@ -7,7 +7,7 @@
 			
 			echo $welcome."<br>";
 			//echo "<a style='margin-right:-10px' href='../views/admin.php'>Painel Admin</a><br>";
-			echo "<a style='margin-right:-10px' href='../api/logout.php'>Logout</a>";
+			echo "<a style='margin-right:-10px; color:#577863' href='../api/logout.php'>Logout</a>";
 		}
 
 	?>

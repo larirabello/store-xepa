@@ -31,14 +31,18 @@ class Db {
         return self::$instance;                     //  não existe apenas retorna
     }
 
+    function setCharset($charset) {
+        mysqli_set_charset($this->conexao, $charset);
+    }
+
 	
 	// função para executar a query sql
 	function sql_query($query){
-         if($this->dados = mysqli_query($this->conexao, $query)){
-             return $this->dados;
-         }else{
-			 die('Query Inválida: ' . mysqli_error());
-         }        
+        if($this->dados = mysqli_query($this->conexao, $query)){
+            return $this->dados;
+        }else{
+            die('Query Inválida: ' . mysqli_error());
+        }        
      }
 }
 

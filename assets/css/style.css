@@ -116,6 +116,11 @@ footer hr {
 	margin-top: 120px;
 }
 
+.pqp {
+  margin-right: 120px;
+  float:right;
+}
+
 .pull-right {
 	margin-top: -20px;
 	margin-right: 120px;
@@ -179,7 +184,7 @@ footer #logoFooter div {
   width: 128px;
   height: 96px;
   background-size: 128px 96px;
-  background: url('../../assets/images/logo2.png');
+  background: url('../images/logo2.png');
 }
 
 
@@ -296,7 +301,7 @@ img#logo {
 
 .page-down {
   position: relative;
-  top: 780px;
+  top: 680px;
   left: calc(50% - 3px);
   width: 12px;
   height: 12px;
@@ -400,4 +405,146 @@ footer.page-footer {
   .container {
       width: 100%;
   }
+}
+
+
+
+
+/**/
+
+ .main-nav,
+    .main {
+      position: relative; 
+     
+    }
+
+    .main-nav {
+      z-index: 150;
+      top:10%;
+      transition: all 0.6s ease;
+    }
+
+    .main-nav #logo {
+      display: none;
+    }
+
+    header,
+    .main-nav-scrolled {
+      position: fixed;
+      width: 100%;
+      top: 0;
+
+    }
+
+    header .header--clear  {
+      transform: translate3d(0, -130px, 0);
+    }
+
+    header div a {
+      border: none;
+    }
+    header #logo div{
+      width: 128px;
+      height: 96px;
+      background-size: 128px 96px;
+      margin: 0 auto;
+      background: url('../images/logo2.png');
+    }
+
+    .main-nav-scrolled {
+      height: 122px;
+    }
+    .main-nav-scrolled #logo {
+      display: block;
+      background-size: 64px 38px;
+      margin: 0 auto;
+    }
+
+    .top-scrolled #logo {
+      display: none;
+    }
+
+    .main-nav-scrolled #logo div {
+      width: 64px;
+      height: 38px;
+      background-size: 64px 38px;
+        background-repeat: no-repeat;
+      margin: 0 auto;
+    }
+
+    .container-fluid {
+      background-color: #fff;
+    }
+
+   /* .col-lg-4 {
+      padding: 0;
+      margin:0;
+      width: 400px;
+    }
+  */
+
+
+  h1.prod-type {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 10px;
+    font-size: 24px;
+    
+  }
+
+  p.prod-desc {
+    font-family: 'Bitter', serif;
+    padding-left: 10px;
+    font-size: 1em;
+    font-style: italic;
+    color: #B7ADA9;
+    
+  }
+
+  .images {
+    padding-bottom:150px;
+  }
+
+  nav {
+    background: #F5F4F4;
+    width: 100%;
+  }
+
+  header {
+    background-color: #F5F4F4;
+    margin-top: 0!important;
+    padding-top: 20px;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    background-color: #F5F4F4;
+  }
+
+  .main-nav-scrolled {
+    border-top: none;
+  }
+
+  img.no {
+    margin: 0 auto;
+  }
+
+
+  /* background */
+
+  .hero-image {
+    height: 100vh;
+    max-height: 1000px;
+    background: url('http://cdn.shopify.com/s/files/1/1148/3974/t/8/assets/img_homepage_slide_2.jpg?3289570631051682394') 50% 50% no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.hero-image__title {
+    margin-bottom: 200px;
+    font-family: "Raleway",Tahoma,Geneva,sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 72px;
+    z-index: 1000;
 }

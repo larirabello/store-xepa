@@ -132,13 +132,10 @@ $user = "";
 
 session_start("login");
 
-if ($_SESSION['status'] !== "ativo")
-   {
-  session_destroy();
-  header("location:index.php");
+ if (isset($_SESSION['nome'])) {
+    $welcome = "<br>Olá, ".$_SESSION['nome'];
   }
 
-  $welcome = "<br>Olá, ".$_SESSION['nome'];
 ?>
   <div class="nav-wrapper">
   <?php
@@ -150,7 +147,18 @@ if ($_SESSION['status'] !== "ativo")
       <div class="col-lg-12 col-md-12">
         <h1 class="prod-type">Produtos</h1>
         <p class="prod-desc">
-        X produtos na lista</p>
+    <?php 
+      require_once('../connection/conn.php');
+      $db = Db::getInstance();
+
+      $info = $db->sql_query("select count(1) as produtos from products");
+
+      if($dados=mysqli_fetch_array($info)) {
+        echo $dados['produtos'].' produtos na lista';
+      }
+
+    ?>
+       </p>
       </div>
     </div> 
     <div class="row images">

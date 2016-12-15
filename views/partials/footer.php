@@ -19,6 +19,7 @@
             <li><a class="grey-text text-lighten-3" href="list.php">Lista de Compras</a></li>
             <li><a class="grey-text text-lighten-3" href="fidelity.php">Cartão Fidelidade</a></li>
             <li><a class="grey-text text-lighten-3" href="contact.php">Fale Conosco</a></li>
+            <li><a class="grey-text text-lighten-3" href="admin.php">Acessar Admin</a></li>
           </ul>
         </div>
          <!-- Colored mini FAB button -->
